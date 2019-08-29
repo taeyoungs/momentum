@@ -1,0 +1,16 @@
+body {
+    background-color: tomato;
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+  
+  h1 {
+    color: white;
+    transition: color 0.5s ease-out;
+  }
+
+  .clicked {
+    color: #deb887;
+  }
