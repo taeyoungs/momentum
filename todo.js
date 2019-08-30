@@ -4,9 +4,25 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = "toDos";
 
-const toDos = [];
+function filterFn(toDo) {
 
-function saveToDos(toDos) {
+}
+
+let toDos = [];
+
+function deleteToDo(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+    // .filter() : 조건에 부합하는 값들로 새로운 배열을 만들어서 반환
+    const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
+
+function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
@@ -17,6 +33,7 @@ function paintToDo(text) {
     const newId = toDos.length + 1;
 
     delBtn.innerHTML = "❌";
+    delBtn.addEventListener("click", deleteToDo);
     span.innerText = text;
     li.appendChild(delBtn);
     li.appendChild(span);
@@ -28,7 +45,7 @@ function paintToDo(text) {
         id : newId
     }
     toDos.push(toDoObj);
-    saveToDos(toDos);
+    saveToDos();
 }
 
 function handleSubmit(event) {
