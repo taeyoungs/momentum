@@ -1,51 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+h1, h3 {
+    margin: 0;
+}
+
+body, html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
 body {
-    background-color: white;
-  }
-
-  .btn {
-    cursor: pointer;
-  }
-
-  .js-weather {
+    font-family: 'Rubik';
     color: white;
-  }
-  
-  h1, h4 {
-    color: white;
-    transition: color 0.5s ease-out;
-  }
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  ul li {
-    color: white;
-  }
+input {
+    outline: none;
+}
 
-  .clicked {
-    color: #deb887;
-  }
-
-  .form, .greetings {
+.js-greeting, .js-greetingForm {
     display: none;
-  }
+}
 
-  .showing {
+.showing {
     display: block;
-  }
+}
 
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
-  .bgImage {
+.bgImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    animation: fadeIn 0.5s linear;
-  }
+    animation: fadeIn 1.5s linear;
+}
+
+.js-weather {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-style: italic;
+    font-size: 13pt;
+}
+
+.js-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.js-title {
+    font-size: 110pt;
+}
+
+.js-greetings {
+    font-size: 30pt;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 300px;
+    border: 0;
+    background: transparent;
+    border-bottom: 3px white solid;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Rubik';
+    font-size: 13pt;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 30px;
+} 

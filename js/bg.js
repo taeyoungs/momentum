@@ -1,22 +1,18 @@
 const body = document.querySelector("body");
 
-const IMG_NUMBER = 5;
+const image = new Image();
 
-function paintImage(imgNumber) {
-    const image = new Image();
-    image.src = `images/${imgNumber+1}.jpg`;
+function randomImage() {
+    fetch(`https://source.unsplash.com/1600x900/?landscape`).then((response) => {   
+    console.log(response);
+    image.src = `${response.url}`;
     image.classList.add("bgImage");
-    body.prepend(image);
-}
-
-function getRandom() {
-    const number = Math.floor(Math.random() * IMG_NUMBER);
-    return number;
+    body.appendChild(image);
+  });
 }
 
 function init() {
-    const randomNumber = getRandom();
-    paintImage(randomNumber);
+    randomImage();
 }
 
 init();
