@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-h1, h3 {
+h1, h3, ul {
     margin: 0;
+    padding: 0;
 }
 
 body, html {
@@ -71,15 +72,34 @@ input {
 .js-title {
     font-size: 110pt;
 }
+.greeting-container {
+    margin-bottom: 25px;
+}
 
 .js-greetings {
     font-size: 30pt;
-    margin-bottom: 20px;
 }
 
-input[type="text"] {
+.js-greetingForm>input[type="text"] {
+  height: 40px;
+  width: 450px;
+  border: 0;
+  background: transparent;
+  border-bottom: 3px white solid;
+  border-radius: 3px;
+  color: silver;
+  font-family: 'Rubik';
+  font-size: 25pt;
+}
+
+.js-greetingForm>input::placeholder {
+  color: silver;
+  font-size: 40px;
+} 
+
+.js-toDoForm>input[type="text"] {
     height: 30px;
-    width: 300px;
+    width: 350px;
     border: 0;
     background: transparent;
     border-bottom: 3px white solid;
@@ -87,9 +107,10 @@ input[type="text"] {
     color: white;
     font-family: 'Rubik';
     font-size: 13pt;
+    margin-bottom: 15px;
 }
 
-input::placeholder {
+.js-toDoForm>input::placeholder {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 } 
