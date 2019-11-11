@@ -88,13 +88,14 @@ input {
   border-bottom: 3px white solid;
   border-radius: 3px;
   color: silver;
-  font-family: 'Rubik';
+  font-family: 'McLaren';
   font-size: 25pt;
 }
 
 .js-greetingForm>input::placeholder {
-  color: silver;
-  font-size: 40px;
+    font-family: 'McLaren';
+    color: silver;
+    font-size: 40px;
 } 
 
 .js-toDoForm>input[type="text"] {
