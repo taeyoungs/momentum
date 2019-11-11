@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=McLaren|Titillium+Web|Rubik&display=swap');
 
 h1, h3, ul {
     margin: 0;
@@ -105,12 +105,13 @@ input {
     border-bottom: 3px white solid;
     border-radius: 3px;
     color: white;
-    font-family: 'Rubik';
+    font-family: 'McLaren';
     font-size: 13pt;
     margin-bottom: 15px;
 }
 
 .js-toDoForm>input::placeholder {
+    font-family: 'McLaren';
     color: white;
     font-size: 25px;
 } 
